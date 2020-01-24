@@ -1,0 +1,25 @@
+{
+  "name": "rtsp-test",
+  "version": "1.0.0",
+  "description": "rtsp -> html page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "az",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "node-rtsp-stream": "0.0.8",
+    "node-rtsp-stream-es6": "^1.0.7",
+    "node-rtsp-stream-jsmpeg": "0.0.2",
+    "utf-8-validate": "^5.0.2",
+    "zabbix-promise": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

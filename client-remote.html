@@ -1,0 +1,19 @@
+<html>
+<body>
+    <div >
+        <canvas id="canvas"></canvas>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="jsmpeg.min.js"></script>
+<script type="text/javascript">
+    var canvas = document.getElementsByTagName('canvas')[0];
+    canvas.width  = 800;
+    canvas.height = 600;
+	player = new JSMpeg.Player('ws://sms.iwt.ru:9999', {
+	  canvas: document.getElementById('canvas'),// Canvas should be a canvas DOM element
+      control : true,
+	})
+</script>
+</html>

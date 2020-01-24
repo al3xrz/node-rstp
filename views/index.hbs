@@ -1,0 +1,37 @@
+<div class="collection">
+    <a href="#!" class="collection-item" id='149' data='149'>149</a>
+    <a href="#!" class="collection-item" id='150' data='150'>150</a>
+    <a href="#!" class="collection-item" id='151' data='151'>151</a>
+    <a href="#!" class="collection-item" id='152' data='152'>152</a>
+    <a href="#!" class="collection-item" id='233' data='233'>233</a>
+    <a href="#!" class="collection-item" id='234' data='234'>234</a>
+</div>
+
+
+
+<canvas id="canvas"></canvas>
+
+<script type="text/javascript" src="jsmpeg.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('a').click(function(sender) {
+        let object_id = sender['target']['id']
+        console.log(object_id);
+        $.ajax({
+            url : 'list',
+            type : 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({"object_id": object_id}),
+        }).done(function(){
+
+        })
+
+    })
+    var canvas = document.getElementsByTagName('canvas')[0];
+    // canvas.width  = 800;
+    // canvas.height = 600;
+    player = new JSMpeg.Player('ws://localhost:9999/', {
+        canvas: document.getElementById('canvas'),
+        control: true,
+    })
+</script>
